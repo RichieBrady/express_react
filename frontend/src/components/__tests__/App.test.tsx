@@ -2,7 +2,7 @@ import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import {expect, test, describe, afterEach} from 'vitest';
 import App from "../../App";
 
-test('Is vitest configured correctly for running tests', () => {
+test('Is vitest configured correctly for running __tests__', () => {
     expect('Configured Correctly').toBe('Configured Correctly');
 });
 
