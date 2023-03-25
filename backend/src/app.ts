@@ -20,6 +20,7 @@ connectDB()
 
 import {errorHandler} from "./middleware/errorHandler.js";
 import indexRouter from './routes/index.js';
+import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors(corsOptions));
 
 app.use('/', indexRouter);
+app.use('/users', userRoutes)
 
 app.all('*', (req, res) => {
     res.status(404)
